@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\EmployeeDetails;
+use App\Models\EmployeeDetail;
 use Illuminate\Database\Eloquent\Model;
 
 class Reservation extends Model
@@ -16,6 +16,6 @@ class Reservation extends Model
     ];
 
     public function employee_detail() {
-        return $this->belongsTo(EmployeeDetails::class);
+        return $this->belongsTo(EmployeeDetail::class);
     }
 }

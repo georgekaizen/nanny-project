@@ -5,7 +5,7 @@
 <div class="jumbotron text-light" style="background-image: url('https://cdn.auth0.com/blog/laravel-6-crud/laravel-beach-bg.png')">
     <div class="container">
         @if(Auth::user())
-        <h1 class="display-4">Welcome back, {{ Auth::user()->nickname}}!</h1>
+        <h1 class="display-4">Welcome back,</h1>
         <p class="lead">To your reservation management.</p>
         <a href="/dashboard" class="btn btn-success btn-lg my-2">View your Dashboard</a>
         @else
@@ -22,7 +22,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Convenient</h5>
-                    <p class="card-text">Manage all your hotel reservations in one place</p>
+                    <p class="card-text">Manage all your Nanny reservations in one place</p>
                 </div>
             </div>
         </div>

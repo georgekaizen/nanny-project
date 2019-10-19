@@ -35,7 +35,7 @@ class ReservationController extends Controller
     public function create($employee_id)
     {
         {
-            $employeeInfo = Employee::with('employee_details')->get()->find($employee_id);
+            $employeeInfo = Employee::with('employee_detail')->find($employee_id);
             return view('dashboard.reservationCreate', compact('employeeInfo'));
           }
     }

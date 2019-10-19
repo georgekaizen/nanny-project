@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\EmployeeDetails;
+use App\Models\EmployeeDetail;
 use Illuminate\Database\Eloquent\Model;
 
 class Employee extends Model
@@ -16,7 +16,7 @@ class Employee extends Model
         'description'
     ];
 
-    public function employee_details() {
-        return $this->hasOne(EmployeeDetails::class);
+    public function employee_detail() {
+        return $this->hasOne(EmployeeDetail::class);
     }
 }

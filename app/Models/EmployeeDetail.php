@@ -6,7 +6,7 @@ use App\Models\Employee;
 use App\Models\Reservation;
 use Illuminate\Database\Eloquent\Model;
 
-class Employee_details extends Model
+class EmployeeDetail extends Model
 {
     public $timestamps = false;
     protected $fillable = [

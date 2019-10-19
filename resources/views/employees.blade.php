@@ -13,7 +13,7 @@
                     <h5 class="card-title">{{ $employee->names }}</h5>
                     <small class="text-muted">{{ $employee->location }}</small>
                     <p class="card-text">{{ $employee->description }}</p>
-                    <a href="/dashboard/reservations/create/{{ $employee->id }}" class="btn btn-primary">Book Now</a>
+                    <a href="{{  url('/dashboard/reservations/create',$employee->id) }}" class="btn btn-primary">Book Now</a>
                 </div>
             </div>
         </div>
