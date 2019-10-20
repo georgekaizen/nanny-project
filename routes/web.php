@@ -11,12 +11,12 @@
 |
 */
 Route::view('/', 'home');
-Route::get('/employees', 'EmployeeController@index')->name('employees');
 
 Route::group(['prefix' => 'dashboard','middleware' =>'auth'], function() {
     Route::view('/', 'dashboard/dashboard');
-    Route::get('reservations/create/{id}', 'ReservationController@create');
+    Route::get('reservations/create/{id}', 'ReservationController@create')->name('create_reservation');
     Route::resource('reservations', 'ReservationController')->except('create');
+    Route::get('employees', 'EmployeeController@index')->name('employees');
     Route::get('employee_registration', 'EmployeeController@registration')->name('employee_registration');
     Route::post('register_employee', 'EmployeeController@store')->name('register_employee');
 });

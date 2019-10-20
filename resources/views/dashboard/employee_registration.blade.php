@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\DB;
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="num_of_children">Names</label>
-                            <input type="text" class="form-control" name="emp_names" placeholder="Names">
+                            <input type="text" class="form-control" name="emp_names" placeholder="Names" required>
 
                         </div>
                     </div>
@@ -29,38 +29,38 @@ use Illuminate\Support\Facades\DB;
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="start_date"> Phone Number</label>
-                            <input type="text" class="form-control" name="emp_phone" placeholder="Phone Number">
+                            <input type="text" class="form-control" name="emp_phone" placeholder="Phone Number" required>
                         </div>
                     </div>
 
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="end_date">Location</label>
-                            <input type="text" class="form-control" name="emp_location" placeholder="Location">
+                            <input type="text" class="form-control" name="emp_location" placeholder="Location" required>
                         </div>
                     </div>
 
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="end_date">ID No</label>
-                            <input type="number" class="form-control" name="emp_id_no" placeholder="ID">
+                            <input type="number" class="form-control" name="emp_id_no" placeholder="ID" required>
                         </div>
                     </div>
 
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="end_date">Description</label>
-                            <textarea class="form-control" name="emp_description" placeholder="Description"> </textarea>
+                            <textarea class="form-control" name="emp_description" required> </textarea>
                         </div>
                     </div>
 
-                    <div class="col-sm-8">
+                    <div class="col-sm-6">
                         <div class="form-group">
                             <label for="employee_detail">Nanny Type</label>
-                            <select class="form-control" name="emp_type">
+                            <select class="form-control" name="emp_type" required>
                                 @php
-                                {{  }}
-                                    $nanny_types = DB::table('nanny_types')->select('id','nanny_type');
+                                {{  
+                                    $nanny_types = DB::table('nanny_types')->select('id','nanny_type')->get();
                                  }}
                                 @endphp
 
@@ -75,21 +75,21 @@ use Illuminate\Support\Facades\DB;
                     <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="end_date"> Price</label>
-                                <input type="number" class="form-control" name="emp_price" placeholder="ID">
+                                <input type="number" class="form-control" name="emp_price" placeholder="ID" required>
                             </div>
                     </div>
 
                     <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="end_date">Work Experience</label>
-                                <textarea class="form-control" name="emp_experience"> </textarea>
+                                <textarea class="form-control" name="emp_experience" required> </textarea>
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="end_date">Availability</label>
-                                    <textarea class="form-control" name="emp_availability"> </textarea>
+                                    <textarea class="form-control" name="emp_availability" required> </textarea>
                                 </div>
                             </div>
 

@@ -16,6 +16,6 @@ class Reservation extends Model
     ];
 
     public function employee_detail() {
-        return $this->belongsTo(EmployeeDetail::class);
+        return $this->belongsTo('App\Models\EmployeeDetail','employee_details_id');
     }
 }

@@ -18,13 +18,13 @@
         <tbody>
             @foreach ($reservations as $reservation)
             <tr>
-                <td>{{-- $reservation->employee_detail->employee['names'] --}}</td>
+                <td>{{ $reservation->employee_detail->employee['names'] }}</td>
                 <td>{{ $reservation->start_date}}</td>
                 <td>{{ $reservation->end_date}}</td>
                 <td>{{ $reservation->employee_detail['type'] }}</td>
                 <td>{{ $reservation->num_of_children }}</td>
-                <td>{{-- $reservation->employee_detail['price'] --}}</td>
-            <td><a href="/dashboard/reservations/{{ $reservation->id }}/edit" class="btn btn-sm btn-success">Edit</a></td>
+                <td>{{ $reservation->employee_detail['price'] }}</td>
+            <td><a href="{{ url('dashboard/reservations/'.$reservation->id.'/edit') }}" class="btn btn-sm btn-success">Edit</a></td>
             </tr>
             @endforeach
         </tbody>

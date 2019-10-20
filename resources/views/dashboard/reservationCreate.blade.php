@@ -12,13 +12,21 @@
             <p class="card-text">Book a Nanny now</p>
             <form action="{{ route('reservations.store') }}" method="POST">
                 @csrf
+                <input type="hidden" name="emp_id" value="{{$employeeInfo->id}}">
                 <div class="row">
                     <div class="col-sm-8">
                         <div class="form-group">
                             <label for="employee_detail">Nanny Type</label>
                             <select class="form-control" name="employee_detail_id">
-                                @foreach ($employeeInfo->employee_details as $option)
-                                    <option value="{{$option->id}}">{{ $option->type }} - ${{ $option->price }}</option>
+                                @php
+                                {{  
+                                    $nanny_types = DB::table('nanny_types')->select('id','nanny_type')->get();
+                                 }}
+                                @endphp
+
+                                @endphp
+                                @foreach ($nanny_types as $nanny_type)
+                                    <option value="{{$nanny_type->id}}">{{ $nanny_type->nanny_type }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -26,19 +34,19 @@
                     <div class="col-sm-4">
                         <div class="form-group">
                             <label for="num_of_children">Number of children</label>
-                            <input class="form-control" name="num_of_children" placeholder="1">
+                            <input class="form-control" name="num_of_children" placeholder="Number of Children" required>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="start_date">Start Date</label>
-                            <input type="date" class="form-control" name="start_date" placeholder="03/21/2020">
+                            <input type="date" class="form-control" name="start_date" placeholder="03/21/2020" required>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="end_date">End Date</label>
-                            <input type="date" class="form-control" name="end_date" placeholder="03/23/2020">
+                            <input type="date" class="form-control" name="end_date" placeholder="03/23/2020" required>
                         </div>
                     </div>
                 </div>

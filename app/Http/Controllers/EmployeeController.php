@@ -28,15 +28,17 @@ class EmployeeController extends Controller
         $employee->description = $request->emp_description;
         $employee->save();
 
-        $employee->id = $id;
+        $id = $employee->id;
 
         $employee_details = new EmployeeDetail();
-        $employee_details =
+        $employee_details->employee_id = $id;
+        $employee_details->type = $request->emp_type;
+        $employee_details->price = $request->emp_price;
+        $employee_details->work_experience = $request->emp_experience;
+        $employee_details->availability = $request->emp_availability;
+        $employee_details->save();
 
-
-        $employees = Employee::all();
-
-        return view('employees')->with('employees', $employees);
+        return redirect()->route('employees');
 
     }
 }
