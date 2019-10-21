@@ -18,7 +18,7 @@
             <div class="card-body">
                 <h4 class="card-title">Find a Nanny</h4>
                 <p class="card-text">Browse our catalog of top-rated Nannys.</p>
-                <a href="/employees" class="btn btn-primary">Our Nannys</a>
+                <a href="/dashboard/employees" class="btn btn-primary">Our Nannys</a>
             </div>
             </div>
         </div>

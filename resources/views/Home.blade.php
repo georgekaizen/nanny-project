@@ -38,7 +38,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Easy using </h5>
-                    <p class="card-text">Book and manage with the click of a button</p>
+                    <p class="card-text">Book and manage with the click of a button most easiest way to go about it</p>
                 </div>
             </div>
         </div>
