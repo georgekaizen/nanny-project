@@ -59,7 +59,7 @@ use Illuminate\Support\Facades\DB;
                             <label for="employee_detail">Nanny Type</label>
                             <select class="form-control" name="emp_type" required>
                                 @php
-                                {{  
+                                {{
                                     $nanny_types = DB::table('nanny_types')->select('id','nanny_type')->get();
                                  }}
                                 @endphp
@@ -75,7 +75,7 @@ use Illuminate\Support\Facades\DB;
                     <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="end_date"> Price</label>
-                                <input type="number" class="form-control" name="emp_price" placeholder="ID" required>
+                                <input type="number" class="form-control" name="emp_price" placeholder="Price" required>
                             </div>
                     </div>
 

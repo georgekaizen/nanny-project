@@ -39,7 +39,7 @@ class ReservationController extends Controller
     {
       $employeeInfo = Employee::with('employee_detail')->find($employee_id);
       return view('dashboard.reservationCreate')->with('employeeInfo', $employeeInfo);
-        
+
     }
 
     /**
@@ -73,7 +73,7 @@ class ReservationController extends Controller
     {
       $reservation = Reservation::with('employee_detail', 'employee_detail.employee')
       ->find($reservation->id);
-      
+
       if ($reservation->user_id === Auth::id()) {
         $employee_id = $reservation->employee_detail->employee_id;
         $employeeInfo = Employee::with('employee_details')->get()->find($employee_id);
